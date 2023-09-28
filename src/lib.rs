@@ -13,17 +13,51 @@ macro_rules! function {
 
 #[macro_export]
 macro_rules! trace {
-    ($x:expr) => {
+    () => {
         println!(
-            "[{}][{}] {} (in {} [{}:{}:{}])",
+            "[{}][{}:{}:{}]{}/{}",
             chrono::Local::now(),
-            $x,
-            function!(),
-            module_path!(),
             file!(),
             line!(),
-            column!()
-        );
+            column!(),
+            module_path!(),
+            $crate::function!()
+        )
+    };
+
+    ($val:expr) => {
+        println!(
+            "[{}][{}:{}:{}]{}/{} {}",
+            chrono::Local::now(),
+            file!(),
+            line!(),
+            column!(),
+            module_path!(),
+            $crate::function!(),
+            $val
+        )
+    };
+
+    ($val:expr $(,)?) => {
+        match $val {
+            tmp => {
+                println!(
+                    "[{}][{}:{}:{}]{}/{} {}",
+                    chrono::Local::now(),
+                    file!(),
+                    line!(),
+                    column!(),
+                    module_path!(),
+                    $crate::function!(),
+                    &tmp
+                );
+                tmp
+            }
+        }
+    };
+
+    ($($val:expr),+ $(,)?) => {
+        ($($crate::trace!($val)),+,)
     };
 }
 
