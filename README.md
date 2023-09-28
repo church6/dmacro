@@ -1,7 +1,7 @@
 Define **C-like** debug trace macro: `enter!()` and `leave!()`.
 
 ```rust
-use dmacro::{enter,leave};
+use dmacro::*;
 
 fn main() {
     enter!();
