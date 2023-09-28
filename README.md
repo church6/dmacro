@@ -1,8 +1,8 @@
-# Define **C-like** debug trace macro: `enter!()` and `leave!()`.
+## Define **C-like** debug trace macro: `enter!()` and `leave!()`.
 
-# Thanks to [//https://stackoverflow.com/questions/38088067](//https://stackoverflow.com/questions/38088067).
+## Thanks to [https://stackoverflow.com/questions/38088067](https://stackoverflow.com/questions/38088067).
 
-# Example
+## Example
 
 ```rust
 use dmacro::*;
