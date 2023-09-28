@@ -1,4 +1,5 @@
-macro_rules! _function {
+#[macro_export]
+macro_rules! function {
     () => {{
         fn f() {}
         fn type_name_of<T>(_: T) -> &'static str {
@@ -10,7 +11,8 @@ macro_rules! _function {
     }};
 }
 
-macro_rules! _trace {
+#[macro_export]
+macro_rules! trace {
     ($x:expr) => {
         println!(
             "[{}][{}] {} (in {} [{}:{}:{}])",
