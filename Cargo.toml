@@ -1,6 +1,6 @@
 [package]
 name = "dmacro"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "define C-like debug trace macro: enter!() and leave!()"
 license = "MIT"
