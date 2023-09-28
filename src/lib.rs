@@ -18,7 +18,7 @@ macro_rules! trace {
             "[{}][{}] {} (in {} [{}:{}:{}])",
             chrono::Local::now(),
             $x,
-            _function!(),
+            function!(),
             module_path!(),
             file!(),
             line!(),
@@ -30,13 +30,13 @@ macro_rules! trace {
 #[macro_export]
 macro_rules! enter {
     () => {
-        _trace!("enter")
+        trace!("enter")
     };
 }
 
 #[macro_export]
 macro_rules! leave {
     () => {
-        _trace!("leave")
+        trace!("leave")
     };
 }
