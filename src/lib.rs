@@ -64,13 +64,13 @@ macro_rules! trace {
 #[macro_export]
 macro_rules! enter {
     () => {
-        trace!("enter")
+        $crate::trace!("enter")
     };
 }
 
 #[macro_export]
 macro_rules! leave {
     () => {
-        trace!("leave")
+        $crate::trace!("leave")
     };
 }
