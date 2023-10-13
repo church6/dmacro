@@ -2,10 +2,12 @@
 name = "dmacro"
 version = "0.1.6"
 edition = "2021"
+categories = ["macro", "debug", "log", "trace", "function-macro"]
 description = "define C-like debug trace macro: enter!() and leave!()"
+keywords = ["macro", "debug", "log", "trace", "function-macro"]
 license = "MIT"
+readme = "README.md"
 repository = "https://github.com/church6/dmacro"
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 chrono = "0.4.31"
