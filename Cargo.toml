@@ -1,6 +1,6 @@
 [package]
 name = "dmacro"
-version = "0.1.8"
+version = "0.1.9"
 edition = "2021"
 categories = ["macro", "debug", "log", "trace", "function-macro"]
 description = "define C-like debug trace macro: enter!() and leave!()"

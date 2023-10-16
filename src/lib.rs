@@ -1,7 +1,8 @@
-//! # dmacro: debug/trace/log macro for Rust
+//! # dmacro: implemente function macro and debug macro and trace macro and log macro for Rust
 //!
-
+//!
 //! This module contains the runtime support for the [`function!`] syntax extension. And also three useful macros [`trace!`], [`enter!`], [`leave!`] are implemented here.
+//! This module contains simple and personal implementation of function macro [`function!`] and debug macro [`trace!`] and trace macro [`trace!`] and log macro [`trace!`] for Rust
 //!
 //!
 //! ## Define **C-like** debug trace macro: `enter!()` and `leave!()`.
